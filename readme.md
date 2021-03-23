@@ -10,4 +10,11 @@ beberapa surat yang bisa di request
 4. Keterangan Miskin
 
 ![Login](https://github.com/deniace/surat_android/blob/master/screenshoot/login.png)
-![Home Warrga](https://github.com/deniace/surat_android/blob/master/screenshoot/homewarga.png)
+![Home Warga](https://github.com/deniace/surat_android/blob/master/screenshoot/home-warga.png)
+![Home RT RW](https://github.com/deniace/surat_android/blob/master/screenshoot/home-rt-rw.png)
+![Biodata warga](https://github.com/deniace/surat_android/blob/master/screenshoot/biodata-warga.png)
+![download surat](https://github.com/deniace/surat_android/blob/master/screenshoot/download-surat.png)
+![List Validasi surat](https://github.com/deniace/surat_android/blob/master/screenshoot/list-validasi-surat.png)
+![biodata](https://github.com/deniace/surat_android/blob/master/screenshoot/list-biodata.png)
+![permohonan surat](https://github.com/deniace/surat_android/blob/master/screenshoot/permohonan-surat.png)
+![validasi surat](https://github.com/deniace/surat_android/blob/master/screenshoot/validasi-surat.png)
