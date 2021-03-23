@@ -2,6 +2,7 @@
 
 
 Aplikasi mobile untuk permohonan surat pengantar pada rt rw
+```dibuat menggunakan android studio 4.1.1```
 beberapa surat yang bisa di request
 
 1. Membuat KTP
