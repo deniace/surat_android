@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="surat"
+            type="com.deni.surat.model.SuratSingle" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_extra_small"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="@dimen/margin_extra_small">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_nama_surat_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_extra_small"
+                    android:layout_weight="1"
+                    android:text="Nama : "
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_nama_surat_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_extra_small"
+                    android:layout_weight="2"
+                    android:text="@{surat.namaUser}"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:text="Nama Warga" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_alamat_surat_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_nama_surat_item"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_extra_small"
+                    android:layout_weight="1"
+                    android:text="Alamat : "
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_alamat_surat_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_extra_small"
+                    android:layout_weight="2"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{surat.alamat}"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    tools:text="Alamat Warga" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_rt_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_extra_small"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="RT : "
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tv_rt_surat_item"
+                app:layout_constraintTop_toBottomOf="@+id/ll_alamat_surat_item" />
+
+            <TextView
+                android:id="@+id/tv_rt_surat_item"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_extra_small"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@{surat.rt}"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@+id/tv_rt_name"
+                app:layout_constraintRight_toLeftOf="@+id/tv_rw_name"
+                app:layout_constraintTop_toBottomOf="@+id/ll_alamat_surat_item"
+                tools:text="01" />
+
+            <TextView
+                android:id="@+id/tv_rw_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_extra_small"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="RW : "
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@+id/tv_rt_surat_item"
+                app:layout_constraintRight_toLeftOf="@+id/tv_rw_surat_item"
+                app:layout_constraintTop_toBottomOf="@+id/ll_alamat_surat_item" />
+
+            <TextView
+                android:id="@+id/tv_rw_surat_item"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_extra_small"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@{surat.rw}"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@+id/tv_rw_name"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_alamat_surat_item"
+                tools:text="01" />
+
+            <TextView
+                android:id="@+id/tv_keperluan_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_extra_small"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Keperluan"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@id/tv_rt_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_rt_name" />
+
+            <TextView
+                android:id="@+id/tv_keperluan_surat_item"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_extra_small"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{surat.keperluan}"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_rt_surat_item"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_rw_name"
+                tools:text="Bikin SIM" />
+
+            <TextView
+                android:id="@+id/tv_status_rt_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_extra_small"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Status RT"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@id/tv_rt_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_keperluan_name" />
+
+            <TextView
+                android:id="@+id/tv_status_rt_surat_item"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_extra_small"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_rt_surat_item"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_keperluan_surat_item"
+                tools:text="Pending" />
+
+            <TextView
+                android:id="@+id/tv_status_rw_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_extra_small"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Status RW"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@id/tv_rt_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_status_rt_name" />
+
+            <TextView
+                android:id="@+id/tv_status_rw_surat_item"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_extra_small"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_rt_surat_item"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_status_rt_surat_item"
+                tools:text="Pending" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.deni.surat.activity.ValidasiSuratDetailActivity" />
+
+        <variable
+            name="surat"
+            type="com.deni.surat.model.SuratSingle" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_normal"
+        tools:context=".activity.ValidasiSuratDetailActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
+
+                <ImageView
+                    android:id="@+id/iv_validasi_surat"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:src="@drawable/noimage"/>
+
+                <TextView
+                    android:id="@+id/text_error_validasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_validasi_usernama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_validasi_usernama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nama"
+
+                        android:text="@={surat.namaUser}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_validasi_tmpt_lahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_validasi_tmpt_lahir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/tempat_lahir"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={surat.tempatLahir}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_validasi_tgl_lahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_validasi_tgl_lahir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/tanggal_lahir"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={surat.tanggalLahir}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_validasi_jk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_validasi_jk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/jenis_kelamin"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={surat.jenisKelamin}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_validasi_agama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_validasi_agama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/agama"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={surat.agama}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_validasi_pekerjaan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_validasi_pekerjaan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/pekerjaan"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={surat.pekerjaan}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_validasi_sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_validasi_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/status_perkawinan"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={surat.statusPerkawinan}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_validasi_nik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_validasi_nik"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nik"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={surat.nik}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_validasi_alamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_validasi_alamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/alamat"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={surat.alamat}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_validasi_rt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_validasi_rt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="RT"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={surat.rt}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_validasi_rw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_validasi_rw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="RW"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={surat.rw}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_validasi_keperluan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_validasi_keperluan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/keperluan_surat"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={surat.keperluan}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_acc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round"
+                        android:backgroundTint="@android:color/holo_green_dark"
+                        android:onClick="@{activity::acc}"
+                        android:text="@string/validasi"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_reject"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round"
+                        android:backgroundTint="@android:color/holo_red_dark"
+                        android:onClick="@{activity::reject}"
+                        android:text="@string/tolak"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/pb_validasi_surat_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

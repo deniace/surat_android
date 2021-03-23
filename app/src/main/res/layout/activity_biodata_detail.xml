@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.deni.surat.activity.BiodataDetailActivity" />
+
+        <variable
+            name="profile"
+            type="com.deni.surat.model.BiodataSingle" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.BiodataDetailActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_profile_usernama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_profile_usernama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nama"
+                        android:text="@={profile.namaUser}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_profile_nohp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_profile_nohp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/no_hp"
+                        android:inputType="phone"
+                        android:text="@={profile.noHp}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jabatan" />
+
+                <Spinner
+                    android:id="@+id/spin_jabatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_profile_alamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_profile_alamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/alamat"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={profile.alamat}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_profile_rt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_profile_rt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="RT"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={profile.rt}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_profile_rw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_profile_rw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="RW"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={profile.rw}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jenis_kelamin" />
+
+                <Spinner
+                    android:id="@+id/spin_jenis_kelamin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agama" />
+
+                <Spinner
+                    android:id="@+id/spin_agama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_profile_tmpt_lahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_profile_tmpt_lahir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/tempat_lahir"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={profile.tempatLahir}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_profile_tgl_lahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_profile_tgl_lahir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/tanggal_lahir"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={profile.tanggalLahir}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_profile_pekerjaan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_profile_pekerjaan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/pekerjaan"
+                        android:inputType="text"
+                        android:maxLines="3"
+                        android:text="@={profile.pekerjaan}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status_perkawinan" />
+
+                <Spinner
+                    android:id="@+id/spin_status_perkawinan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_profile"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="25dp"
+                        android:background="@drawable/round"
+                        android:backgroundTint="@android:color/holo_green_dark"
+                        android:onClick="@{activity::updateProfile}"
+                        android:text="@string/ubah"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/button_delete"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="25dp"
+                        android:background="@drawable/round"
+                        android:backgroundTint="@android:color/holo_red_dark"
+                        android:onClick="@{activity::delete}"
+                        android:text="@string/hapus"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/pb_biodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

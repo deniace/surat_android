@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    Created by Deni Supriyatna on 04 - juni - 2020.-->
+<!--    Email : denisupriyatna01@gmail.com-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/colorPrimaryDark" />
+    <corners android:radius="10dp" />
+</shape>

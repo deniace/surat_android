@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Surat Pengantar</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="error_login">Terjadi kesalahan ketika login</string>
+    <string name="login_success">Login Success</string>
+    <string name="nama">Nama</string>
+    <string name="no_hp">Nomer HP</string>
+    <string name="alamat">Alamat</string>
+    <string name="error_register">Terjadi kesalahan ketika registrasi</string>
+    <string name="jabatan">Jabatan</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="biodata">Biodata</string>
+    <string name="data_warga">Data Warga</string>
+    <string name="validasi">Validasi</string>
+    <string name="permohonan_surat">Permohonan Surat</string>
+    <string name="download_surat">Download Surat</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="agama">Agama</string>
+    <string name="tempat_lahir">Tempat Lahir</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="status_perkawinan">Status Perkawinan</string>
+    <string name="ubah">Ubah</string>
+    <string name="error_ambil_data">Terjadi Kesalahan ketika mengambil data</string>
+    <string name="error_kirim_data">Terjadi kesalahan saat mengirim data</string>
+    <string name="keperluan_surat">Keperluan Surat</string>
+    <string name="contoh_keperluan_surat">Contoh keperluan surat: Pembuatan KTP, Perpanjang KTP, Membuat KK, dll</string>
+    <string name="kirim_permohonan_surat">Kirim Permohonan Surat</string>
+    <string name="pekerjaan">Pekerjaan</string>
+    <string name="nik">Nomor KTP / NIK</string>
+    <string name="tolak">Tolak</string>
+    <string name="error_hapus_data">Terjadi Kesalahan saat menghapus data</string>
+    <string name="hapus">Hapus</string>
+
+    <string-array name="jabatan_array">
+        <item>Pilih</item>
+        <item>Warga</item>
+        <item>Ketua RT</item>
+        <item>Ketua RW</item>
+    </string-array>
+
+    <string-array name="jeniskelamin_array">
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
+    <string-array name="agama_array">
+        <item>Islam</item>
+        <item>Kristen Protestan</item>
+        <item>Katolik</item>
+        <item>Hindu</item>
+        <item>Budha</item>
+    </string-array>
+
+    <string-array name="status_perkawinan_array">
+        <item>Belum Menikah</item>
+        <item>Sudah Menikah</item>
+        <item>Duda</item>
+        <item>Janda</item>
+    </string-array>
+
+    <string-array name="keperluan_surat_array">
+        <item>Membuat KTP</item>
+        <item>Pembuatan Kartu Keluarga (KK)</item>
+        <item>SKTM (Surat Keterangan Tidak Mampu)</item>
+        <item>Keterangan Miskin</item>
+    </string-array>
+</resources>
